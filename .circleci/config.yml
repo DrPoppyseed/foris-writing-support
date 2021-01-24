@@ -21,7 +21,10 @@ jobs:
       - checkout
       - run:
           name: Run tests
-          command: npm run test
+          command: |
+            nohup npm run start &
+            sleep 3
+            npm run test
   deploy:
     docker:
       - image: circleci/node:10.16.3
