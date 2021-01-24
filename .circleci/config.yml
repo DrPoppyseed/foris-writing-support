@@ -21,18 +21,15 @@ jobs:
       - checkout
       - run:
           name: Run tests
-          command: |
-            nohup npm run start &
-            sleep 3
-            npm run test
-  deploy:
-    docker:
-      - image: circleci/node:10.16.3
-    steps:
-      - checkout
-      - run:
-          name: deploy
-          command: curl -X POST -d {} ${hook}
+          command: npm run test
+  # deploy:
+  #   docker:
+  #     - image: circleci/node:10.16.3
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: deploy
+  #         command: curl -X POST -d {} ${hook}
 workflows:
   build_test_and_deploy:
     jobs:
@@ -40,11 +37,11 @@ workflows:
       - test:
           requires:
             - build
-      - hold:
-          type: approval
-          requires:
-            - build
-            - test
-      - deploy:
-          requires:
-            - hold
+      # - hold:
+      #     type: approval
+      #     requires:
+      #       - build
+      #       - test
+      # - deploy:
+      #     requires:
+      #       - hold
