@@ -14,11 +14,6 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-  test:
-    docker:
-      - image: circleci/node:10.16.3
-    steps:
-      - checkout
       - run:
           name: Run tests
           command: npm run test
@@ -30,18 +25,3 @@ jobs:
   #     - run:
   #         name: deploy
   #         command: curl -X POST -d {} ${hook}
-workflows:
-  build_test_and_deploy:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
-      # - hold:
-      #     type: approval
-      #     requires:
-      #       - build
-      #       - test
-      # - deploy:
-      #     requires:
-      #       - hold
