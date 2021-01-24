@@ -32,21 +32,20 @@ jobs:
     steps:
       - checkout
       - run:
-        name: deploy
-        command: curl -X POST -d {} ${hook}
-
+          name: deploy
+          command: curl -X POST -d {} ${hook}
 workflows:
   build_test_and_deploy:
     jobs:
       - build
       - test:
-        requires:
-          - build
+          requires:
+            - build
       - hold:
-        type: approval
-        requires:
-          - build
-          - test
+          type: approval
+          requires:
+            - build
+            - test
       - deploy:
-        requires:
-          - hold
+          requires:
+            - hold
