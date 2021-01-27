@@ -454,7 +454,25 @@
     }
   }
   @media screen and (max-width: 800px) and (min-width: 481px) {
+    .area_about {
+      text-align: center;
+      padding: 80px 0;
+    }
+    .area_about .ttl,
+    .area_about strong {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+    .area_about .ttl {
+      width: 100%;
+    }
+    .area_about_right {
+      display: none;
+    }
   }
   @media screen and (max-width: 480px) {
+    .area_about_right {
+      display: none;
+    }
   }
 </style>

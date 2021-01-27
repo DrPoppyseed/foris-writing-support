@@ -2,19 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name='description' content='アメリカ大学合格に必須な英文添削を最高レベルのプロによるサポートで合格率を格段にあげよう！' />
 
-    <title>世界最高レベルの添削サービス【FORIS ESSAY</title>
+    <title>✍最高レベルの英文添削サービス【FORIS ESSAY】</title>
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/global.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./imgs/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./imgs/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./imgs/icons/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="./imgs/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+			
+		<link rel="stylesheet" href="/global.css" />
 		<link rel="stylesheet" href="/build/bundle.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
-		<!-- <link rel='stylesheet' href='https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' /> -->
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
 
     <script defer src="/build/bundle.js"></script>
   </head>
 
-  <body></body>
+  <body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', function () {
+					navigator.serviceWorker
+						.register('/serviceworker.js')
+						.then(res => console.log('service worker registered'))
+						.catch(err => console.log('service worker not registered', err))
+				})
+			}
+		</script>
+	</body>
 </html>
