@@ -80,15 +80,25 @@
         align="right"
         imageUrl="dummy_image.jpeg"
         imageAlt="dummy Image"
-        name="Firstname Lastname"
-        description="初めまして、ワシントン大学卒業生です。"
+        name="Annalise Lineman"
+        description="ワシントン大学シアトル校を2020年に卒業。大学では
+					言語学・文学を専攻。ライティングセンターでの
+					チュータリング経験も豊富で、TEFL(Teaching English
+					as a Foreign Language Certificate)も所有。
+					ワシントン大学の語学学校にて留学生に英語の講師
+					経験もあります。"
       />
       <StaffComp
         align="left"
         imageUrl="dummy_image.jpeg"
         imageAlt="dummy Image"
-        name="Firstname Lastname"
-        description="初めまして、ワシントン大学卒業生です。"
+        name="Khadijah"
+        description="現役ワシントン大学シアトル校在学生。心理学を専攻し、
+					アジア言語学を副専攻。シアトルセントラルカレッジと
+					ワシントン大学シアトル校のライティングセンターの
+					チューターに3年間従事。MESA(Mathmatics, Engineering,
+					Science Achievement)のチューターも行っており、
+					理系の視点においてもエッセイ添削を行うことができます。"
       />
     </div>
   </section>
@@ -281,8 +291,14 @@
   .area_staff {
     background: var(--darkBlue);
     color: var(--secondary);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 0 100px;
+  }
+
+  .area_staff .body_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   /* q&a */

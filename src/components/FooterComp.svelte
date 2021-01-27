@@ -7,7 +7,7 @@
     <h2 class="ttl">FORIS ESSAY</h2>
     <div class="body_home">
       <Link to=""><h3 class="text">利用者規約</h3></Link>
-      <Link to=""><h3 class="text">個人情婦取り扱い方針</h3></Link>
+      <Link to=""><h3 class="text">個人情報取り扱い方針</h3></Link>
       <Link to=""><h3 class="text">お問い合わせ</h3></Link>
     </div>
     <p class="copyright">All rights reserved 2021</p>
