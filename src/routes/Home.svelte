@@ -47,16 +47,16 @@
       <FeatureComp
         point="1"
         title="世界的にトップスクール合格者のみが講師に。"
-        description="コロンビア大学やワシントン大学などトップスクールと言われる<br />
-            大学に合格し、大学のチュータリング経験も豊富な講師が<br />
+        description="コロンビア大学やワシントン大学などトップスクールと言われる
+            大学に合格し、大学のチュータリング経験も豊富な講師が
             丁寧に対応いたします。"
       />
       <FeatureComp
         point="2"
         title="アイデアから細部まで丁寧な添削を。"
-        description="コロンビア大学やワシントン大学などトップスク＝ると言われる<br />
-            大学に合格し、大学のチュータリング経験も豊富な講師が<br />
-            丁寧に対応いたします。"
+        description="合格するためのエッセイにはアイデアの部分から
+						細部の文法までを完璧にする必要があります。
+						FORIS ESSAYではしっかりと作り上げます"
       />
     </div>
   </section>
@@ -235,8 +235,7 @@
   .area_need {
     color: var(--secondary);
     background: var(--darkBlue);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
   .area_need .ttl {
     font-size: 30px;
@@ -344,5 +343,78 @@
     margin-top: 20px;
     margin: 0 100px 100px;
     box-shadow: 2px 2px 4px -2px gray inset;
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .area {
+      padding: 0 5%;
+    }
+    .area_about .ttl,
+    .area_about strong {
+      font-size: 36px;
+      line-height: 1.5;
+    }
+    .right_ttl {
+      font-size: 26px;
+      margin-top: 40px;
+    }
+    .area_need {
+      padding: 60px 0;
+    }
+
+    .area_features {
+      padding: 80px 0 140px;
+    }
+    .area_features .ttl {
+      font-size: 33px;
+      white-space: nowrap;
+    }
+    .area_features strong {
+      font-size: 36px;
+    }
+
+    .triangle {
+      border-width: 0 14vw 10vw 14vw;
+    }
+    .area_qa {
+      padding-bottom: 80px;
+    }
+    .area_flow {
+      padding: 20px 0 30px;
+    }
+    .area_flow .flow {
+      font-size: 30px;
+    }
+  }
+  @media screen and (min-width: 801px) and (max-width: 1024px) {
+    .area {
+      padding: 0 5%;
+    }
+    .area_about .ttl,
+    .area_about strong {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+    .area_about_right {
+      height: 280px;
+      /* width: 45%; */
+    }
+    .right_ttl {
+      font-size: 22px;
+      margin-top: 25px;
+    }
+    .area_need {
+      padding: 40px 0;
+    }
+    .area_need .ttl {
+      font-size: 24px;
+    }
+    .area_need .paragraph {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 800px) and (min-width: 481px) {
+  }
+  @media screen and (max-width: 480px) {
   }
 </style>

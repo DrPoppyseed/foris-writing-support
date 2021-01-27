@@ -20,7 +20,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 830px;
   }
   .point {
     flex-shrink: 0;
@@ -32,7 +32,7 @@
     background: #9f2b2b;
     border-radius: 300px;
     color: white;
-    margin-right: 160px;
+    margin-right: 100px;
   }
   .ttl {
     font-size: 35px;
@@ -43,5 +43,25 @@
   }
   .text_home {
     width: 70%;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .container {
+      width: 800px;
+    }
+    .point {
+      margin-right: 80px;
+      height: 220px;
+      width: 220px;
+    }
+    .ttl {
+      font-size: 30px;
+      margin-right: 7px;
+    }
+    .ttl_num {
+      font-size: 40px;
+    }
+    .text_home {
+      margin-top: -20px;
+    }
   }
 </style>
