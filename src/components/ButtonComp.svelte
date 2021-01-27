@@ -1,12 +1,8 @@
-<script>
-  import { Link } from 'svelte-routing'
-</script>
-
-<Link to="subscribe">
+<a href="https://form.run/@foris-essay">
   <div class="btn_subscribe">
     <h2 class="ttl">FORIS ESSAYに応募する</h2>
   </div>
-</Link>
+</a>
 
 <style>
   .btn_subscribe {

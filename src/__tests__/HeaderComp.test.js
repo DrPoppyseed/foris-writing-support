@@ -14,6 +14,6 @@ test('Contact button is rendered on the header', () => {
 
   expect(getByText('お問い合わせ')).toHaveAttribute(
     'href',
-    'mailto: contact@foris.work'
+    'https://form.run/@foris-essay'
   )
 })

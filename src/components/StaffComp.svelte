@@ -35,4 +35,20 @@
     font-size: 30px;
     margin-left: 30px;
   }
+  @media screen and (min-width: 801px) and (max-width: 1024px) {
+    .container {
+      width: 600px;
+    }
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 100px;
+    }
+    .ttl {
+      font-size: 24px;
+    }
+    .description {
+      font-size: 16px;
+    }
+  }
 </style>

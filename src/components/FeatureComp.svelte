@@ -44,7 +44,7 @@
   .text_home {
     width: 70%;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1280px) {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
     .container {
       width: 800px;
     }
@@ -62,6 +62,24 @@
     }
     .text_home {
       margin-top: -20px;
+    }
+  }
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+    .container {
+      width: 600px;
+    }
+    .point {
+      height: 160px;
+      width: 160px;
+    }
+    .ttl {
+      font-size: 28px;
+    }
+    .ttl_num {
+      font-size: 32px;
+    }
+    .text_home .ttl {
+      font-size: 26px;
     }
   }
 </style>

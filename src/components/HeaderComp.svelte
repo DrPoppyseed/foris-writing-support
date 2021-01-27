@@ -6,7 +6,7 @@
     <nav class="nav_header">
       <div class="list_nav_header">
         <h3>
-          <a class="btn_icon_mail" href="mailto: contact@foris.work"
+          <a class="btn_icon_mail" href="https://form.run/@foris-essay"
             >お問い合わせ</a
           >
         </h3>

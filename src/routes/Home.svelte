@@ -412,6 +412,46 @@
     .area_need .paragraph {
       font-size: 16px;
     }
+    .area_features {
+      padding: 80px 0;
+    }
+
+    .area_features .ttl {
+      font-size: 26px;
+    }
+    .area_features strong {
+      font-size: 28px;
+    }
+    .triangle {
+      border-width: 0 14vw 10vw 14vw;
+    }
+    .area_goal .description {
+      font-size: 22px;
+    }
+    .area_goal strong {
+      font-size: 26px;
+    }
+    .area_staff {
+      padding: 80px 0;
+    }
+    .area_staff .ttl {
+      font-size: 28px;
+    }
+    .area_qa {
+      padding: 40px 5%;
+    }
+    .area_qa .ttl {
+      font-size: 26px;
+    }
+    .area_flow {
+      padding: 40px 0;
+    }
+    .area_flow .ttl {
+      font-size: 26px;
+    }
+    .area_flow .flow {
+      font-size: 22px;
+    }
   }
   @media screen and (max-width: 800px) and (min-width: 481px) {
   }
