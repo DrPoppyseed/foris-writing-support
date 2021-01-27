@@ -1,5 +1,4 @@
 <script>
-  import { Link } from 'svelte-routing'
   import MediaQuery from '../MediaQuery.svelte'
   import ButtonComp from '../components/ButtonComp.svelte'
   import HeaderComp from '../components/HeaderComp.svelte'
@@ -265,7 +264,7 @@
     width: 0;
     height: 0;
     border-width: 0 10vw 8vw 10vw;
-    border-color: transparent transparent var(--secondary) transparent;
+    border-color: var(--secondary) transparent var(--secondary) transparent;
     border-style: solid;
     transform: rotate(180deg);
   }

@@ -16,6 +16,4 @@
   .question {
     border-bottom: 0.5px solid white;
   }
-  .answer {
-  }
 </style>

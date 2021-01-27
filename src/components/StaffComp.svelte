@@ -1,4 +1,4 @@
-<div class="container .{$$props.align}">
+<div class="container .{$$props.align || 'right'}">
   <div class="img">
     <img src="imgs/{$$props.imageUrl}" alt={$$props.imageAlt} />
   </div>

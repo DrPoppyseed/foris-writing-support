@@ -44,6 +44,4 @@
   .text_home {
     width: 70%;
   }
-  .description {
-  }
 </style>
