@@ -6,6 +6,7 @@
   import QAComp from '../components/QAComp.svelte'
   import FeatureComp from '../components/FeatureComp.svelte'
   import StaffComp from '../components/StaffComp.svelte'
+  import Link from 'svelte-routing/src/Link.svelte'
 </script>
 
 <HeaderComp />
@@ -29,8 +30,10 @@
     <div class="body_home">
       <p class="paragraph">
         転学・進学の合格に非常に重要になってくるのが、エッセイです。エッセイが最も重要な要素と言っても<br
+          class="br"
         />
         過言ではありません。でも、実際に願書の準備などを始めてエッセイを書き始めてみると、<br
+          class="br"
         />
         受かるエッセイにするのは非常に難しい問題です。
       </p>
@@ -40,7 +43,9 @@
   <section class="area area_features">
     <div class="head_home">
       <h2 class="ttl">
-        FORIS ESSAYはあなたのエッセイを<strong>受かる</strong>エッセイにします！
+        FORIS ESSAYはあなたのエッセイを<br class="features_br" /><strong
+          >受かる</strong
+        >エッセイにします！
       </h2>
     </div>
     <div class="body_home">
@@ -65,7 +70,9 @@
     <div class="triangle" />
     <div class="body_home">
       <p class="description">
-        人生のキャリアが変わる大きな節目に世界最高レベルの添削サービスで<br />
+        人生のキャリアが変わる大きな節目に世界最高レベルの添削サービスで<br
+          class="goal_br"
+        />
         希望校への<strong>合格</strong>を共に果たしましょう！
       </p>
     </div>
@@ -140,30 +147,23 @@
       <p class="flow">
         1.ご応募　＞＞　2.日程調整　＞＞　3.添削開始 　＞＞　4.出願
       </p>
+      <p class="flow_mobile">
+        1.ご応募<br />
+        2.日程調整<br />
+        3.添削開始<br />
+        4.出願
+      </p>
     </div>
   </section>
   <!-- 購入　-->
   <section class="area area_subscribe">
     <div class="body_home">
       <div class="image_container">
-        <MediaQuery query="(min-width: 481px)" let:matches>
-          {#if matches}
-            <img
-              class="campaign_image"
-              src="imgs/campaign_desktop.png"
-              alt="キャンペーン画像"
-            />
-          {/if}
-        </MediaQuery>
-        <MediaQuery query="(max-width: 480px)" let:matches>
-          {#if matches}
-            <img
-              class="campaign_image"
-              src="imgs/campaign_mobile.png"
-              alt="キャンペーン画像"
-            />
-          {/if}
-        </MediaQuery>
+        <img
+          class="campaign_image"
+          src="imgs/campaign_desktop.png"
+          alt="キャンペーン画像"
+        />
       </div>
       <div class="subscribe_btn_container">
         <ButtonComp />
@@ -259,6 +259,9 @@
     align-items: center;
     width: 100%;
   }
+  .features_br {
+    display: none;
+  }
 
   /* goal */
   .area_goal {
@@ -323,6 +326,10 @@
   .area_flow .flow {
     font-size: 35px;
     text-align: center;
+    display: block;
+  }
+  .flow_mobile {
+    display: none;
   }
 
   /* subscribe */
@@ -372,6 +379,9 @@
     .area_features strong {
       font-size: 36px;
     }
+    .features_br {
+      display: none;
+    }
 
     .triangle {
       border-width: 0 14vw 10vw 14vw;
@@ -384,6 +394,10 @@
     }
     .area_flow .flow {
       font-size: 30px;
+      display: block;
+    }
+    .flow_mobile {
+      display: none;
     }
   }
   @media screen and (min-width: 801px) and (max-width: 1024px) {
@@ -422,6 +436,9 @@
     .area_features strong {
       font-size: 28px;
     }
+    .features_br {
+      display: none;
+    }
     .triangle {
       border-width: 0 14vw 10vw 14vw;
     }
@@ -452,6 +469,9 @@
     .area_flow .flow {
       font-size: 22px;
     }
+    .flow_mobile {
+      display: none;
+    }
   }
   @media screen and (max-width: 800px) and (min-width: 481px) {
     .area_about {
@@ -469,10 +489,173 @@
     .area_about_right {
       display: none;
     }
+    .area_need {
+      padding: 40px 5%;
+    }
+    .area_need .ttl {
+      font-size: 22px;
+    }
+    .area_need .paragraph {
+      font-size: 16px;
+    }
+    .br {
+      display: none;
+    }
+    .area_features {
+      padding: 40px 0 60px;
+    }
+    .area_features .ttl {
+      font-size: 22px;
+      text-align: center;
+    }
+    .area_features strong {
+      font-size: 24px;
+    }
+    .features_br {
+      display: block;
+    }
+    .triangle {
+      border-width: 0 14vw 10vw 14vw;
+    }
+    .area_goal {
+      padding: 0 5%;
+      width: 90%;
+    }
+    .area_goal .description {
+      font-size: 18px;
+      text-align: center;
+    }
+    .area_goal strong {
+      font-size: 20px;
+    }
+    .goal_br {
+      display: none;
+    }
+    .area_staff .ttl {
+      font-size: 22px;
+    }
+    .area_staff {
+      padding: 40px 5%;
+    }
+    .area_qa {
+      padding: 40px 5%;
+    }
+    .area_qa .ttl {
+      font-size: 22px;
+    }
+    .area_flow {
+      padding: 20px 5%;
+    }
+    .area_flow .ttl {
+      font-size: 22px;
+    }
+    .area_flow .flow {
+      display: none;
+    }
+    .flow_mobile {
+      text-align: center;
+      display: block;
+      font-size: 18px;
+      line-height: 2;
+    }
+    .area_subscribe .subscribe_btn_container {
+      margin: 20px 0 40px;
+    }
   }
   @media screen and (max-width: 480px) {
+    .area_about {
+      text-align: center;
+      padding: 30px 0;
+    }
+    .area_about .ttl,
+    .area_about strong {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .area_about .ttl {
+      width: 100%;
+    }
     .area_about_right {
       display: none;
+    }
+    .area_need {
+      padding: 30px 5%;
+    }
+    .area_need .ttl {
+      font-size: 20px;
+    }
+    .area_need .paragraph {
+      font-size: 16px;
+      text-align: left;
+      line-height: 1.2;
+    }
+    .br {
+      display: none;
+    }
+    .area_features {
+      padding: 40px 0 60px;
+      width: 100%;
+    }
+    .area_features .ttl {
+      font-size: 20px;
+      text-align: center;
+      width: 90%;
+    }
+    .area_features strong {
+      font-size: 22px;
+    }
+    .features_br {
+      display: none;
+    }
+    .triangle {
+      border-width: 0 14vw 10vw 14vw;
+    }
+    .area_goal {
+      padding: 0 5%;
+      width: 90%;
+    }
+    .area_goal .description {
+      font-size: 16px;
+      text-align: center;
+    }
+    .area_goal strong {
+      font-size: 20px;
+    }
+    .goal_br {
+      display: none;
+    }
+    .area_staff .ttl {
+      font-size: 20px;
+    }
+    .area_staff {
+      padding: 40px 5%;
+    }
+    .area_qa {
+      padding: 40px 5%;
+    }
+    .area_qa .ttl {
+      font-size: 20px;
+    }
+    .area_flow {
+      padding: 20px 5%;
+    }
+    .area_flow .ttl {
+      font-size: 20px;
+    }
+    .area_flow .flow {
+      display: none;
+    }
+    .flow_mobile {
+      text-align: center;
+      display: block;
+      font-size: 18px;
+      line-height: 2;
+    }
+    .area_subscribe {
+      padding: 0;
+    }
+    .area_subscribe .subscribe_btn_container {
+      margin: 20px 5% 40px;
     }
   }
 </style>

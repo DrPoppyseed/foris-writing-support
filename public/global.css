@@ -29,3 +29,7 @@ header {
   left: 0;
   background-color: #064780;
 }
+
+* {
+  overflow-x: hidden;
+}

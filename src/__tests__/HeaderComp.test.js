@@ -4,16 +4,15 @@ import { render } from '@testing-library/svelte'
 import HeaderComp from '../components/HeaderComp.svelte'
 
 test("'Foris Essay' is rendered on the header", () => {
-  const { getByText } = render(HeaderComp)
+  const { getAllByText } = render(HeaderComp)
 
-  expect(getByText('FORIS ESSAY')).toBeInTheDocument()
+  getAllByText('FORIS ESSAY').forEach(text => expect(text).toBeInTheDocument())
 })
 
 test('Contact button is rendered on the header', () => {
-  const { getByText } = render(HeaderComp)
+  const { getAllByText } = render(HeaderComp)
 
-  expect(getByText('お問い合わせ')).toHaveAttribute(
-    'href',
-    'https://form.run/@foris-essay'
+  getAllByText('お問い合わせ').forEach(text =>
+    expect(text).toHaveAttribute('href', 'https://form.run/@foris-essay')
   )
 })

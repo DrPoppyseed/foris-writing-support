@@ -17,4 +17,26 @@
     font-family: 'Hiragino Kaku Gothic ProN W3';
     font-size: 30px;
   }
+  @media screen and (min-width: 481px) and (max-width: 800px) {
+    .btn_subscribe {
+      width: 100%;
+      padding: 5px;
+    }
+    .ttl {
+      text-align: center;
+      font-size: 22px;
+      white-space: nowrap;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .btn_subscribe {
+      width: 100%;
+      padding: 5px;
+    }
+    .ttl {
+      text-align: center;
+      font-size: 20px;
+      white-space: nowrap;
+    }
+  }
 </style>
