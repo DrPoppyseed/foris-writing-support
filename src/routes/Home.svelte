@@ -1,12 +1,10 @@
 <script>
-  import MediaQuery from '../MediaQuery.svelte'
   import ButtonComp from '../components/ButtonComp.svelte'
   import HeaderComp from '../components/HeaderComp.svelte'
   import FooterComp from '../components/FooterComp.svelte'
   import QAComp from '../components/QAComp.svelte'
   import FeatureComp from '../components/FeatureComp.svelte'
   import StaffComp from '../components/StaffComp.svelte'
-  import Link from 'svelte-routing/src/Link.svelte'
 </script>
 
 <HeaderComp />
@@ -225,7 +223,6 @@
     justify-content: center;
   }
   .head_home .ttl {
-    /* font: 400 50px 'Hiragino Kaku Gothic ProN W3'; */
     font-weight: 300;
     font-size: 36px;
     line-height: 1.5;
@@ -402,7 +399,10 @@
   }
   @media screen and (min-width: 801px) and (max-width: 1024px) {
     .area {
-      padding: 0 5%;
+      padding: 0;
+    }
+    .area_about .ttl {
+      padding-left: 5%;
     }
     .area_about .ttl,
     .area_about strong {
@@ -411,7 +411,7 @@
     }
     .area_about_right {
       height: 280px;
-      /* width: 45%; */
+      width: 45%;
     }
     .right_ttl {
       font-size: 22px;
