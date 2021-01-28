@@ -2,6 +2,7 @@ const staticForisEssay = 'foris-essay-site-v1'
 const assets = [
   '/index.html',
   '/global.css',
+  '/manifest.json',
   '/build/bundle.css',
   '/build/bundle.js',
   '/build/bundle.js.map',
@@ -28,7 +29,7 @@ self.addEventListener('fetch', fetchEvent => {
 
 self.addEventListener('fetch', evt => {
   console.log('[ServiceWorker] Fetch', evt.request.url)
-  if (evt.request.url.includes('localhost')) {
+  if (evt.request.url.includes('foris')) {
     evt.respondWith(
       caches.open(staticForisEssay).then(cache => {
         return cache.match(evt.request).then(
